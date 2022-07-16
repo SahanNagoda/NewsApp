@@ -18,6 +18,8 @@ class LoginViewModel: ObservableObject{
             }
         }
     }
+    @Published var password: String = ""
     @Published var emailStatus: TextFieldStatus = .idel
     @Published var validEmail: Bool = false
+    @Published var errorMsg: String = ""
 }

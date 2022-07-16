@@ -20,7 +20,7 @@ struct MaterialTextField: View {
     @Binding var text: String
     let status: TextFieldStatus
     let errorMsg: String
-    let isSecure: Bool = false
+    let isSecure: Bool
     
     func getColor() -> Color {
         

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7A4C805A28827A7F000B42B5 /* NewsAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4C805928827A7F000B42B5 /* NewsAppApp.swift */; };
-		7A4C805C28827A7F000B42B5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4C805B28827A7F000B42B5 /* ContentView.swift */; };
 		7A4C805E28827A81000B42B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A4C805D28827A81000B42B5 /* Assets.xcassets */; };
 		7A4C806128827A81000B42B5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A4C806028827A81000B42B5 /* Preview Assets.xcassets */; };
 		7A4C806B28827FE6000B42B5 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4C806A28827FE6000B42B5 /* LoginView.swift */; };
@@ -22,7 +21,6 @@
 /* Begin PBXFileReference section */
 		7A4C805628827A7F000B42B5 /* NewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A4C805928827A7F000B42B5 /* NewsAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAppApp.swift; sourceTree = "<group>"; };
-		7A4C805B28827A7F000B42B5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7A4C805D28827A81000B42B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A4C806028827A81000B42B5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7A4C806A28827FE6000B42B5 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -80,7 +78,6 @@
 				7A4C806E288282F7000B42B5 /* Components */,
 				7A4C806828827FA7000B42B5 /* Views */,
 				7A4C806728827D22000B42B5 /* Application */,
-				7A4C805B28827A7F000B42B5 /* ContentView.swift */,
 				7A4C805D28827A81000B42B5 /* Assets.xcassets */,
 				7A4C805F28827A81000B42B5 /* Preview Content */,
 			);
@@ -264,7 +261,6 @@
 				7A4C80752882840B000B42B5 /* Color+Extension.swift in Sources */,
 				7A4C806B28827FE6000B42B5 /* LoginView.swift in Sources */,
 				7A4C80722882834B000B42B5 /* MaterialTextField.swift in Sources */,
-				7A4C805C28827A7F000B42B5 /* ContentView.swift in Sources */,
 				7A4C80772882865A000B42B5 /* String+Extention.swift in Sources */,
 				7A4C805A28827A7F000B42B5 /* NewsAppApp.swift in Sources */,
 			);

@@ -60,12 +60,14 @@ struct MaterialTextField: View {
                     .foregroundColor( text.isEmpty ? .DarkGrey : .black)
                     .keyboardType(.emailAddress)
                     .focused($inputTextField)
+                    .frame(width: .infinity)
             }else{
                 TextField(inputTextField ? "" : hint, text: $text)
                     .font(.custom("Poppins", size: 15 ))
                     .foregroundColor( text.isEmpty ? .DarkGrey : .black)
                     .keyboardType(.emailAddress)
                     .focused($inputTextField)
+                    .frame(width: .infinity)
             }
             Rectangle()
                 .fill(getColor())

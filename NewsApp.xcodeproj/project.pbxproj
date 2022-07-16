@@ -15,6 +15,9 @@
 		7A4C80722882834B000B42B5 /* MaterialTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4C80712882834B000B42B5 /* MaterialTextField.swift */; };
 		7A4C80752882840B000B42B5 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4C80742882840B000B42B5 /* Color+Extension.swift */; };
 		7A4C80772882865A000B42B5 /* String+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4C80762882865A000B42B5 /* String+Extention.swift */; };
+		7A4C807A28828BB1000B42B5 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4C807928828BB1000B42B5 /* DataStore.swift */; };
+		7A4C807D28828CB7000B42B5 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4C807C28828CB7000B42B5 /* SignUpView.swift */; };
+		7A4C807F28828CD1000B42B5 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4C807E28828CD0000B42B5 /* SignUpViewModel.swift */; };
 		8E5603BDE7174A5735728821 /* Pods_NewsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8A5167E53CEA60E848510CB /* Pods_NewsApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +31,9 @@
 		7A4C80712882834B000B42B5 /* MaterialTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialTextField.swift; sourceTree = "<group>"; };
 		7A4C80742882840B000B42B5 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		7A4C80762882865A000B42B5 /* String+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extention.swift"; sourceTree = "<group>"; };
+		7A4C807928828BB1000B42B5 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		7A4C807C28828CB7000B42B5 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		7A4C807E28828CD0000B42B5 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		B64A618294090210B44882F7 /* Pods-NewsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsApp.debug.xcconfig"; path = "Target Support Files/Pods-NewsApp/Pods-NewsApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B8A5167E53CEA60E848510CB /* Pods_NewsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF10731028ADF54904119966 /* Pods-NewsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsApp.release.xcconfig"; path = "Target Support Files/Pods-NewsApp/Pods-NewsApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -74,6 +80,7 @@
 		7A4C805828827A7F000B42B5 /* NewsApp */ = {
 			isa = PBXGroup;
 			children = (
+				7A4C807828828BA0000B42B5 /* Data */,
 				7A4C8073288283EB000B42B5 /* Extensions */,
 				7A4C806E288282F7000B42B5 /* Components */,
 				7A4C806828827FA7000B42B5 /* Views */,
@@ -103,6 +110,7 @@
 		7A4C806828827FA7000B42B5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7A4C807B28828C86000B42B5 /* SignUp */,
 				7A4C806928827FAF000B42B5 /* Login */,
 			);
 			path = Views;
@@ -132,6 +140,23 @@
 				7A4C80762882865A000B42B5 /* String+Extention.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7A4C807828828BA0000B42B5 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				7A4C807928828BB1000B42B5 /* DataStore.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		7A4C807B28828C86000B42B5 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				7A4C807C28828CB7000B42B5 /* SignUpView.swift */,
+				7A4C807E28828CD0000B42B5 /* SignUpViewModel.swift */,
+			);
+			path = SignUp;
 			sourceTree = "<group>";
 		};
 		C67A2A293E09E8E53CCCA745 /* Pods */ = {
@@ -257,9 +282,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A4C807A28828BB1000B42B5 /* DataStore.swift in Sources */,
 				7A4C806D28828082000B42B5 /* LoginViewModel.swift in Sources */,
 				7A4C80752882840B000B42B5 /* Color+Extension.swift in Sources */,
 				7A4C806B28827FE6000B42B5 /* LoginView.swift in Sources */,
+				7A4C807F28828CD1000B42B5 /* SignUpViewModel.swift in Sources */,
+				7A4C807D28828CB7000B42B5 /* SignUpView.swift in Sources */,
 				7A4C80722882834B000B42B5 /* MaterialTextField.swift in Sources */,
 				7A4C80772882865A000B42B5 /* String+Extention.swift in Sources */,
 				7A4C805A28827A7F000B42B5 /* NewsAppApp.swift in Sources */,

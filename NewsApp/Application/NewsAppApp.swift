@@ -6,13 +6,15 @@
 //
 
 import SwiftUI
-
+import NavigationStack
 @main
 struct NewsAppApp: App {
     var body: some Scene {
         WindowGroup {
-            LoginView()
-                .preferredColorScheme(.light)
+            NavigationStackView {
+                LoginView()
+                    
+            }.preferredColorScheme(.light)
         }
     }
 }

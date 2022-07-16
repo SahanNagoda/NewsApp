@@ -24,12 +24,17 @@ struct AllNewsView: View {
                         Image("LeftArrow").colorMultiply(.black)
                     }
                     Spacer()
-                    ZStack{
-                        Circle()
-                            .fill(LinearGradient(colors: [.Primary, .LightRed], startPoint: .topLeading, endPoint: .bottomTrailing))
-                            .frame(width: 32, height: 32)
-                        Image("Filter")
+                    Button {
+                        viewModel.showFilter.toggle()
+                    } label: {
+                        ZStack{
+                            Circle()
+                                .fill(LinearGradient(colors: [.Primary, .LightRed], startPoint: .topLeading, endPoint: .bottomTrailing))
+                                .frame(width: 32, height: 32)
+                            Image("Filter")
+                        }
                     }
+                    
                 }
                 .padding(.horizontal, 15)
                 Text("Latest News")
@@ -106,6 +111,12 @@ struct AllNewsView: View {
                 Spacer()
             }
             
+        }
+        .sheet(isPresented: $viewModel.showFilter, onDismiss: {
+            viewModel.articles = []
+            getLatestNewsWithFilter()
+        }) {
+            FiltersView(isPresented: $viewModel.showFilter, selectedLanguage: $viewModel.selectedLanguage, selectedCountry: $viewModel.selectedCountry)
         }
         .onAppear{
             getLatestNewsWithFilter()

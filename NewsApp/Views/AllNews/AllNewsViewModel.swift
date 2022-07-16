@@ -15,6 +15,7 @@ class AllNewsViewModel: ObservableObject{
     @Published var selectedLanguage: FilterItem?
     @Published var selectedCountry: FilterItem?
     @Published var isBusy: Bool = false
+    @Published var showFilter: Bool = false
     var totalArticleCount: Int = 0
     let provider: MoyaProvider<ArticleAPI>
     private var newsWithFilterSubscription: AnyCancellable?

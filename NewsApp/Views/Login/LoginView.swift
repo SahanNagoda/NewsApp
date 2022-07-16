@@ -119,7 +119,7 @@ extension LoginView{
     fileprivate func loginUser(){
         viewModel.loginUser { status, msg in
             if status{
-                //TODO: Send to DashBoard
+                self.navigationStack.push(HomeView())
             }else{
                 viewModel.errorMsg = msg ?? "Something went wrong"
                 viewModel.emailStatus = .danger

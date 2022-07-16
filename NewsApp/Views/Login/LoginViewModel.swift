@@ -23,6 +23,14 @@ class LoginViewModel: ObservableObject{
     @Published var validEmail: Bool = false
     @Published var errorMsg: String = ""
     
+    init(){
+        #if DEBUG
+            email = "sahan.nagodavithana@gmail.com"
+            password = "12345"
+            validEmail = true
+        #endif
+    }
+    
     func loginUser(completion: @escaping(_ status: Bool, _ message: String?) -> Void) {
         if !validEmail {
             return completion(false, "Email is not valid")

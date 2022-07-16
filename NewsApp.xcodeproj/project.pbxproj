@@ -18,6 +18,17 @@
 		7A4C807A28828BB1000B42B5 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4C807928828BB1000B42B5 /* DataStore.swift */; };
 		7A4C807D28828CB7000B42B5 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4C807C28828CB7000B42B5 /* SignUpView.swift */; };
 		7A4C807F28828CD1000B42B5 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4C807E28828CD0000B42B5 /* SignUpViewModel.swift */; };
+		7A4C808228829AD5000B42B5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4C808128829AD5000B42B5 /* HomeView.swift */; };
+		7A4C808428829ED5000B42B5 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4C808328829ED5000B42B5 /* HomeViewModel.swift */; };
+		7A4C808C2882A474000B42B5 /* Nunito-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7A4C80862882A473000B42B5 /* Nunito-Light.ttf */; };
+		7A4C808D2882A474000B42B5 /* Nunito-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7A4C80872882A474000B42B5 /* Nunito-Black.ttf */; };
+		7A4C808E2882A474000B42B5 /* Nunito-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7A4C80882882A474000B42B5 /* Nunito-ExtraBold.ttf */; };
+		7A4C808F2882A474000B42B5 /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7A4C80892882A474000B42B5 /* Nunito-Regular.ttf */; };
+		7A4C80902882A474000B42B5 /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7A4C808A2882A474000B42B5 /* Nunito-Bold.ttf */; };
+		7A4C80912882A474000B42B5 /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7A4C808B2882A474000B42B5 /* Nunito-SemiBold.ttf */; };
+		7A4C80942882A778000B42B5 /* NewYorkSmall-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7A4C80922882A778000B42B5 /* NewYorkSmall-Regular.ttf */; };
+		7A4C80952882A778000B42B5 /* NewYorkSmall-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7A4C80932882A778000B42B5 /* NewYorkSmall-Semibold.ttf */; };
+		7A4C80992882AE39000B42B5 /* ACarousel in Frameworks */ = {isa = PBXBuildFile; productRef = 7A4C80982882AE39000B42B5 /* ACarousel */; };
 		8E5603BDE7174A5735728821 /* Pods_NewsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8A5167E53CEA60E848510CB /* Pods_NewsApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +45,17 @@
 		7A4C807928828BB1000B42B5 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		7A4C807C28828CB7000B42B5 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		7A4C807E28828CD0000B42B5 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		7A4C808128829AD5000B42B5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		7A4C808328829ED5000B42B5 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		7A4C80862882A473000B42B5 /* Nunito-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Light.ttf"; sourceTree = "<group>"; };
+		7A4C80872882A474000B42B5 /* Nunito-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Black.ttf"; sourceTree = "<group>"; };
+		7A4C80882882A474000B42B5 /* Nunito-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraBold.ttf"; sourceTree = "<group>"; };
+		7A4C80892882A474000B42B5 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
+		7A4C808A2882A474000B42B5 /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
+		7A4C808B2882A474000B42B5 /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-SemiBold.ttf"; sourceTree = "<group>"; };
+		7A4C80922882A778000B42B5 /* NewYorkSmall-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NewYorkSmall-Regular.ttf"; sourceTree = "<group>"; };
+		7A4C80932882A778000B42B5 /* NewYorkSmall-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NewYorkSmall-Semibold.ttf"; sourceTree = "<group>"; };
+		7A4C80962882A7A0000B42B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B64A618294090210B44882F7 /* Pods-NewsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsApp.debug.xcconfig"; path = "Target Support Files/Pods-NewsApp/Pods-NewsApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B8A5167E53CEA60E848510CB /* Pods_NewsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF10731028ADF54904119966 /* Pods-NewsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsApp.release.xcconfig"; path = "Target Support Files/Pods-NewsApp/Pods-NewsApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -44,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A4C80992882AE39000B42B5 /* ACarousel in Frameworks */,
 				8E5603BDE7174A5735728821 /* Pods_NewsApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,6 +103,8 @@
 		7A4C805828827A7F000B42B5 /* NewsApp */ = {
 			isa = PBXGroup;
 			children = (
+				7A4C80962882A7A0000B42B5 /* Info.plist */,
+				7A4C80852882A3D9000B42B5 /* Fonts */,
 				7A4C807828828BA0000B42B5 /* Data */,
 				7A4C8073288283EB000B42B5 /* Extensions */,
 				7A4C806E288282F7000B42B5 /* Components */,
@@ -110,6 +135,7 @@
 		7A4C806828827FA7000B42B5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7A4C808028829A06000B42B5 /* Home */,
 				7A4C807B28828C86000B42B5 /* SignUp */,
 				7A4C806928827FAF000B42B5 /* Login */,
 			);
@@ -159,6 +185,30 @@
 			path = SignUp;
 			sourceTree = "<group>";
 		};
+		7A4C808028829A06000B42B5 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				7A4C808128829AD5000B42B5 /* HomeView.swift */,
+				7A4C808328829ED5000B42B5 /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		7A4C80852882A3D9000B42B5 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				7A4C80872882A474000B42B5 /* Nunito-Black.ttf */,
+				7A4C808A2882A474000B42B5 /* Nunito-Bold.ttf */,
+				7A4C80882882A474000B42B5 /* Nunito-ExtraBold.ttf */,
+				7A4C80862882A473000B42B5 /* Nunito-Light.ttf */,
+				7A4C80892882A474000B42B5 /* Nunito-Regular.ttf */,
+				7A4C808B2882A474000B42B5 /* Nunito-SemiBold.ttf */,
+				7A4C80922882A778000B42B5 /* NewYorkSmall-Regular.ttf */,
+				7A4C80932882A778000B42B5 /* NewYorkSmall-Semibold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		C67A2A293E09E8E53CCCA745 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +236,9 @@
 			dependencies = (
 			);
 			name = NewsApp;
+			packageProductDependencies = (
+				7A4C80982882AE39000B42B5 /* ACarousel */,
+			);
 			productName = NewsApp;
 			productReference = 7A4C805628827A7F000B42B5 /* NewsApp.app */;
 			productType = "com.apple.product-type.application";
@@ -214,6 +267,9 @@
 				Base,
 			);
 			mainGroup = 7A4C804D28827A7F000B42B5;
+			packageReferences = (
+				7A4C80972882AE39000B42B5 /* XCRemoteSwiftPackageReference "ACarousel" */,
+			);
 			productRefGroup = 7A4C805728827A7F000B42B5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -228,8 +284,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A4C80912882A474000B42B5 /* Nunito-SemiBold.ttf in Resources */,
+				7A4C80902882A474000B42B5 /* Nunito-Bold.ttf in Resources */,
+				7A4C808F2882A474000B42B5 /* Nunito-Regular.ttf in Resources */,
+				7A4C80952882A778000B42B5 /* NewYorkSmall-Semibold.ttf in Resources */,
 				7A4C806128827A81000B42B5 /* Preview Assets.xcassets in Resources */,
+				7A4C80942882A778000B42B5 /* NewYorkSmall-Regular.ttf in Resources */,
 				7A4C805E28827A81000B42B5 /* Assets.xcassets in Resources */,
+				7A4C808E2882A474000B42B5 /* Nunito-ExtraBold.ttf in Resources */,
+				7A4C808C2882A474000B42B5 /* Nunito-Light.ttf in Resources */,
+				7A4C808D2882A474000B42B5 /* Nunito-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,8 +347,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A4C807A28828BB1000B42B5 /* DataStore.swift in Sources */,
+				7A4C808428829ED5000B42B5 /* HomeViewModel.swift in Sources */,
 				7A4C806D28828082000B42B5 /* LoginViewModel.swift in Sources */,
 				7A4C80752882840B000B42B5 /* Color+Extension.swift in Sources */,
+				7A4C808228829AD5000B42B5 /* HomeView.swift in Sources */,
 				7A4C806B28827FE6000B42B5 /* LoginView.swift in Sources */,
 				7A4C807F28828CD1000B42B5 /* SignUpViewModel.swift in Sources */,
 				7A4C807D28828CB7000B42B5 /* SignUpView.swift in Sources */,
@@ -423,6 +489,7 @@
 				DEVELOPMENT_TEAM = Z2D3W88VKU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NewsApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -454,6 +521,7 @@
 				DEVELOPMENT_TEAM = Z2D3W88VKU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NewsApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -495,6 +563,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7A4C80972882AE39000B42B5 /* XCRemoteSwiftPackageReference "ACarousel" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JWAutumn/ACarousel";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7A4C80982882AE39000B42B5 /* ACarousel */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7A4C80972882AE39000B42B5 /* XCRemoteSwiftPackageReference "ACarousel" */;
+			productName = ACarousel;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7A4C804E28827A7F000B42B5 /* Project object */;
 }

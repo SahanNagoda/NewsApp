@@ -14,8 +14,6 @@ struct HomeView: View {
     @StateObject private var viewModel = HomeViewModel()
     @EnvironmentObject private var navigationStack: NavigationStack
     @FocusState private var inputTextField: Bool
-    let roles = ["Luffy", "Zoro", "Sanji", "Nami", "Usopp", "Chopper", "Robin", "Franky", "Brook"]
-    
     
     //MARK: Body
     var body: some View {
@@ -28,23 +26,19 @@ struct HomeView: View {
                         .frame(width: .infinity, height: 32, alignment: .leading)
                     
                     HStack {
-                        TextField("Search", text: $viewModel.searchText)
+                        Text("Search")
                             .font(.custom("Poppins", size: 12 ))
-                            .foregroundColor( viewModel.searchText.isEmpty ? .DarkGrey : .black)
+                            .foregroundColor(  .DarkGrey)
                             .keyboardType(.webSearch)
                             .focused($inputTextField)
                             .frame(width: .infinity)
                             .padding(.leading, 16)
                         Spacer()
-                        Button {
-                            
-                        } label: {
-                            Image("Search")
-                        }
-                        .padding(.trailing, 16)
-                        
+                        Image("Search")
+                            .padding(.trailing, 16)
                     }
-                    
+                }.onTapGesture {
+                    self.navigationStack.push(SearchView())
                 }
                 ZStack{
                     Circle()

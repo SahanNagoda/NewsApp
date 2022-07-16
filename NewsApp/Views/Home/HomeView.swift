@@ -57,7 +57,7 @@ struct HomeView: View {
                         .multilineTextAlignment(.center)
                     Spacer()
                     Button {
-                        
+                        self.navigationStack.push(AllNewsView())
                     } label: {
                         Text("See All")
                             .font(.custom("Nunito", size: 12 ))

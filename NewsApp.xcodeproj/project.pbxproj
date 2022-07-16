@@ -41,6 +41,8 @@
 		7A4C80B42883134F000B42B5 /* DropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4C80B32883134F000B42B5 /* DropDown.swift */; };
 		7A4C80B728831734000B42B5 /* WrappingHStack in Frameworks */ = {isa = PBXBuildFile; productRef = 7A4C80B628831734000B42B5 /* WrappingHStack */; };
 		7A4C80B92883197F000B42B5 /* FiltersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4C80B82883197F000B42B5 /* FiltersViewModel.swift */; };
+		7A8F993228833EF400243655 /* AllNewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F993128833EF400243655 /* AllNewsView.swift */; };
+		7A8F99342883415300243655 /* AllNewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F99332883415300243655 /* AllNewsViewModel.swift */; };
 		8E5603BDE7174A5735728821 /* Pods_NewsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8A5167E53CEA60E848510CB /* Pods_NewsApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +80,8 @@
 		7A4C80B0288312BF000B42B5 /* FiltersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersView.swift; sourceTree = "<group>"; };
 		7A4C80B32883134F000B42B5 /* DropDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDown.swift; sourceTree = "<group>"; };
 		7A4C80B82883197F000B42B5 /* FiltersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewModel.swift; sourceTree = "<group>"; };
+		7A8F993128833EF400243655 /* AllNewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllNewsView.swift; sourceTree = "<group>"; };
+		7A8F99332883415300243655 /* AllNewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllNewsViewModel.swift; sourceTree = "<group>"; };
 		B64A618294090210B44882F7 /* Pods-NewsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsApp.debug.xcconfig"; path = "Target Support Files/Pods-NewsApp/Pods-NewsApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B8A5167E53CEA60E848510CB /* Pods_NewsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF10731028ADF54904119966 /* Pods-NewsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsApp.release.xcconfig"; path = "Target Support Files/Pods-NewsApp/Pods-NewsApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -161,6 +165,7 @@
 		7A4C806828827FA7000B42B5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7A8F993028833EDD00243655 /* AllNews */,
 				7A4C80AF288312A6000B42B5 /* Filters */,
 				7A4C80A72882F3FD000B42B5 /* Search */,
 				7A4C808028829A06000B42B5 /* Home */,
@@ -289,6 +294,15 @@
 				7A4C80B32883134F000B42B5 /* DropDown.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		7A8F993028833EDD00243655 /* AllNews */ = {
+			isa = PBXGroup;
+			children = (
+				7A8F993128833EF400243655 /* AllNewsView.swift */,
+				7A8F99332883415300243655 /* AllNewsViewModel.swift */,
+			);
+			path = AllNews;
 			sourceTree = "<group>";
 		};
 		C67A2A293E09E8E53CCCA745 /* Pods */ = {
@@ -449,6 +463,8 @@
 				7A4C80A22882BBEE000B42B5 /* Generic.swift in Sources */,
 				7A4C807D28828CB7000B42B5 /* SignUpView.swift in Sources */,
 				7A4C80B92883197F000B42B5 /* FiltersViewModel.swift in Sources */,
+				7A8F993228833EF400243655 /* AllNewsView.swift in Sources */,
+				7A8F99342883415300243655 /* AllNewsViewModel.swift in Sources */,
 				7A4C80722882834B000B42B5 /* MaterialTextField.swift in Sources */,
 				7A4C80772882865A000B42B5 /* String+Extention.swift in Sources */,
 				7A4C805A28827A7F000B42B5 /* NewsAppApp.swift in Sources */,
@@ -586,7 +602,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NewsApp/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "K News";
+				INFOPLIST_KEY_CFBundleDisplayName = "K World";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -619,7 +635,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NewsApp/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "K News";
+				INFOPLIST_KEY_CFBundleDisplayName = "K World";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

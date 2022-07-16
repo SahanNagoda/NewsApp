@@ -14,7 +14,7 @@ class SearchViewModel: ObservableObject{
     @Published var selectedCategory: String = ""
     let categories = ["Business","Entertainment","General","Health","Science","Sports","Technology"]
     @Published var articles: Articles = []
-    @Published var categoryArticlePage: Int = 1
+    @Published var articlePage: Int = 1
     let provider: MoyaProvider<ArticleAPI>
     @Published var isBusy: Bool = false
     @Published var showFilter: Bool = false
@@ -69,7 +69,7 @@ class SearchViewModel: ObservableObject{
     
     func getNewsByCategory(completion: @escaping(_ status: Bool, _ message: String?) -> Void) {
         isBusy = true
-        newsWithFilterSubscription = provider.requestPublisher(.searchNewsWithFilter(category: selectedCategory, country: selectedCountry?.code ?? "",language: selectedLanguage?.code ?? "", keywords: searchText, page: categoryArticlePage, pageSize: 10))
+        newsWithFilterSubscription = provider.requestPublisher(.searchNewsWithFilter(category: selectedCategory, country: selectedCountry?.code ?? "",language: selectedLanguage?.code ?? "", keywords: searchText, page: articlePage, pageSize: 10))
             .subscribe(on: DispatchQueue.global(qos: .default))
             .receive(on: DispatchQueue.main)
             .tryMap{ element -> Data in

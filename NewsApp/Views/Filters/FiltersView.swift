@@ -15,8 +15,12 @@ struct FilterItem: Hashable {
 }
 
 struct FiltersView: View {
+    @Binding var isPresented: Bool
+    @Binding var selectedLanguage: FilterItem?
+    @Binding var selectedCountry: FilterItem?
     @StateObject private var viewModel = FiltersViewModel()
     @EnvironmentObject private var navigationStack: NavigationStack
+
     var body: some View {
         VStack(alignment: .leading){
             HStack{
@@ -121,13 +125,45 @@ struct FiltersView: View {
                 }
             }
             Spacer()
+            HStack {
+                Button {
+                    selectedCountry = viewModel.selectedCountry
+                    selectedLanguage = viewModel.selectedLanguage
+                    isPresented.toggle()
+                } label: {
+                    ZStack{
+                        
+                        RoundedRectangle(cornerRadius: 24)
+                            .fill(LinearGradient(colors: [.Primary, .LightRed], startPoint: .topLeading, endPoint: .bottomTrailing))
+                        
+                        
+                        HStack {
+                            Text("Save")
+                                .font(.custom("Nunito", size: 20 ))
+                                .fontWeight(.bold)
+                                .foregroundColor( .white)
+                                .multilineTextAlignment(.center)
+                            
+                            
+                        }
+                        .padding(.vertical, 8)
+                        .padding(.horizontal,16)
+                    }
+                }
+                .frame(height: 48)
+                .padding(.bottom, 20)
+            }
         }
         .padding(.horizontal, 15)
+        .onAppear{
+            viewModel.selectedCountry = selectedCountry
+            viewModel.selectedLanguage = selectedLanguage
+        }
     }
 }
 
-struct FiltersView_Previews: PreviewProvider {
-    static var previews: some View {
-        FiltersView()
-    }
-}
+//struct FiltersView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        FiltersView(isPresented: .constant(true))
+//    }
+//}

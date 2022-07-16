@@ -28,7 +28,10 @@ struct SearchView: View {
                     HStack {
                         TextField("Search", text: $viewModel.searchText)
                             .onSubmit({
-                                getLatestNews()
+                                if viewModel.searchText.isEmpty {
+                                    return
+                                }
+                                getLatestNewsWithFilter()
                             })
                             .font(.custom("Poppins", size: 12 ))
                             .foregroundColor( viewModel.searchText.isEmpty ? .DarkGrey : .black)
@@ -55,7 +58,7 @@ struct SearchView: View {
                 ScrollView(.horizontal,showsIndicators: false){
                     HStack {
                         Button {
-                            viewModel.showFliter.toggle()
+                            viewModel.showFilter.toggle()
                         } label: {
                             ZStack{
                                 
@@ -84,7 +87,7 @@ struct SearchView: View {
                             Button {
                                 viewModel.selectedCategory = item
                                 viewModel.articles = []
-                                getLatestNewsByCategory()
+                                getLatestNewsWithFilter()
                             } label: {
                                 ZStack{
                                     if isSelected {
@@ -167,8 +170,10 @@ struct SearchView: View {
                 
             }
         }
-        .sheet(isPresented: $viewModel.showFliter) {
-            FiltersView()
+        .sheet(isPresented: $viewModel.showFilter, onDismiss: {
+            getLatestNewsWithFilter()
+        }) {
+            FiltersView(isPresented: $viewModel.showFilter, selectedLanguage: $viewModel.selectedLanguage, selectedCountry: $viewModel.selectedCountry)
         }
         .onAppear{
             DispatchQueue.main.async {
@@ -195,7 +200,7 @@ extension SearchView{
         }
     }
     
-    fileprivate func getLatestNewsByCategory(){
+    fileprivate func getLatestNewsWithFilter(){
         viewModel.getNewsByCategory { status, msg in
             if !status{
                 //TODO: Add Error Alert

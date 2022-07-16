@@ -66,7 +66,7 @@ class HomeViewModel: ObservableObject{
     
     func getLatestNewsByCategory(completion: @escaping(_ status: Bool, _ message: String?) -> Void) {
         
-        newsWithFilterSubscription = provider.requestPublisher(.topHeadlineWithFilter(category: selectedCategory, country: "US", page: categoryArticlePage, pageSize: 10))
+        newsWithFilterSubscription = provider.requestPublisher(.topHeadlineWithFilter(category: selectedCategory, country: "US", language: "en", page: categoryArticlePage, pageSize: 10))
             .subscribe(on: DispatchQueue.global(qos: .default))
             .receive(on: DispatchQueue.main)
             .tryMap{ element -> Data in

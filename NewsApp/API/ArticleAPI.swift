@@ -10,9 +10,9 @@ import Moya
 
 enum ArticleAPI {
     case searchNews(keywords: String, page: Int,pageSize: Int)
-    case searchNewsWithFilter(category: String, country: String, keywords: String, page: Int,pageSize: Int)
+    case searchNewsWithFilter(category: String, country: String, language: String, keywords: String, page: Int,pageSize: Int)
     case topHeadline(country: String, page: Int,pageSize: Int)
-    case topHeadlineWithFilter(category: String, country: String, page: Int,pageSize: Int)
+    case topHeadlineWithFilter(category: String, country: String, language: String, page: Int,pageSize: Int)
 }
 
 extension ArticleAPI: TargetType {
@@ -55,13 +55,14 @@ extension ArticleAPI: TargetType {
                               "q": keywords,
                               "apiKey": apiKey
                             ], encoding: URLEncoding.queryString)
-        case .searchNewsWithFilter(category: let category, country: let country, keywords: let keywords, page: let page, pageSize: let pageSize):
+        case .searchNewsWithFilter(category: let category, country: let country, language: let language, keywords: let keywords, page: let page, pageSize: let pageSize):
                 return .requestParameters(
                     parameters: [ "page": page,
                                   "pageSize": pageSize,
                                   "q": keywords,
                                   "category": category,
                                   "country": country,
+                                  "language": language,
                                   "apiKey": apiKey
                                 ], encoding: URLEncoding.queryString)
         case .topHeadline(country: let country, page: let page, pageSize: let pageSize):
@@ -71,12 +72,13 @@ extension ArticleAPI: TargetType {
                               "country": country,
                               "apiKey": apiKey
                             ], encoding: URLEncoding.queryString)
-        case .topHeadlineWithFilter(category: let category,country: let country,  page: let page, pageSize: let pageSize):
+        case .topHeadlineWithFilter(category: let category, country: let country, language: let language,  page: let page, pageSize: let pageSize):
             return .requestParameters(
                 parameters: [ "page": page,
                               "pageSize": pageSize,
                               "category": category,
                               "country": country,
+                              "language": language,
                               "apiKey": apiKey
                             ], encoding: URLEncoding.queryString)
         }

@@ -6,19 +6,19 @@
 //
 
 import Foundation
-enum CPStatus: String, Codable {
+enum NAStatus: String, Codable {
     case error
     case ok
 }
 
-struct CPGeneric: Codable {
-    let status: CPStatus
+struct NAGeneric: Codable {
+    let status: NAStatus
     let message: String?
     let code: String?
 }
 
-struct CPResponse<T: Codable>: Codable {
-    let status: CPStatus
+struct NAResponse<T: Codable>: Codable {
+    let status: NAStatus
     let message: String?
     let code: String?
     let articles: T?

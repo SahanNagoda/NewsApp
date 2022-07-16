@@ -13,37 +13,26 @@
 import Foundation
 
 // MARK: - Article
-struct Article: Codable {
-    let source: Source
+struct Article: Codable, Hashable {
+    var id = UUID().uuidString
     let author: String?
     let title: String
-    let articleDescription: String
+    let articleDescription: String?
     let url: String
-    let urlToImage: String
-    let publishedAt: Date
-    let content: String
+    let urlToImage: String?
+    let content: String?
+    
 
     enum CodingKeys: String, CodingKey {
-        case source = "source"
         case author = "author"
         case title = "title"
         case articleDescription = "description"
         case url = "url"
         case urlToImage = "urlToImage"
-        case publishedAt = "publishedAt"
         case content = "content"
     }
 }
 
-// MARK: - Source
-struct Source: Codable {
-    let id: String?
-    let name: String
 
-    enum CodingKeys: String, CodingKey {
-        case id = "id"
-        case name = "name"
-    }
-}
 
 typealias Articles = [Article]

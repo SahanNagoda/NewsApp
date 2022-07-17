@@ -65,7 +65,7 @@ struct ArticleDetailView: View {
                                     .fill(.white)
                                 
                             )
-                            .padding(.top, 70)
+                            .padding(.top, 80)
                             
                             VStack(alignment: .leading,spacing: 8){
                                 Text(article.title)

@@ -15,12 +15,14 @@ struct FilterItem: Hashable {
 }
 
 struct FiltersView: View {
+    //MARK: Properties
     @Binding var isPresented: Bool
     @Binding var selectedLanguage: FilterItem?
     @Binding var selectedCountry: FilterItem?
     @StateObject private var viewModel = FiltersViewModel()
     @EnvironmentObject private var navigationStack: NavigationStack
 
+    //MARK: Body
     var body: some View {
         VStack(alignment: .leading){
             HStack{
@@ -35,11 +37,8 @@ struct FiltersView: View {
                     viewModel.selectedLanguage = nil
                 } label: {
                     ZStack{
-                        
                         RoundedRectangle(cornerRadius: 16)
                             .stroke(.black, lineWidth: 1)
-                        
-                        
                         HStack {
                             Image("Reset")
                             Text("Reset")
@@ -47,15 +46,12 @@ struct FiltersView: View {
                                 .fontWeight(.semibold)
                                 .foregroundColor( .black)
                                 .multilineTextAlignment(.center)
-                            
-                            
                         }
                         .padding(.vertical, 8)
                         .padding(.horizontal,16)
                     }
                 }
                 .frame(width: 85,height: 32)
-                
             }
             .padding(.top, 15)
             
@@ -72,23 +68,7 @@ struct FiltersView: View {
                 Button {
                     viewModel.selectedCountry = item
                 } label: {
-                    ZStack{
-                        if isSelected {
-                            RoundedRectangle(cornerRadius: 16)
-                                .fill(LinearGradient(colors: [.Primary, .LightRed], startPoint: .topLeading, endPoint: .bottomTrailing))
-                        }else{
-                            RoundedRectangle(cornerRadius: 16)
-                                .stroke(Color.LightGrey, lineWidth: 1)
-                        }
-                        
-                        Text(item.title)
-                            .font(.custom("Nunito", size: 12 ))
-                            .fontWeight(.semibold)
-                            .foregroundColor(isSelected ? .white : .black)
-                            .multilineTextAlignment(.center)
-                            .padding(.horizontal,16)
-                            .padding(.vertical, 8)
-                    }
+                    CategoryButton(isSelected: isSelected, item: item.title)
                 }
             }
             
@@ -105,26 +85,11 @@ struct FiltersView: View {
                 Button {
                     viewModel.selectedLanguage = item
                 } label: {
-                    ZStack{
-                        if isSelected {
-                            RoundedRectangle(cornerRadius: 16)
-                                .fill(LinearGradient(colors: [.Primary, .LightRed], startPoint: .topLeading, endPoint: .bottomTrailing))
-                        }else{
-                            RoundedRectangle(cornerRadius: 16)
-                                .stroke(Color.LightGrey, lineWidth: 1)
-                        }
-                        
-                        Text(item.title)
-                            .font(.custom("Nunito", size: 12 ))
-                            .fontWeight(.semibold)
-                            .foregroundColor(isSelected ? .white : .black)
-                            .multilineTextAlignment(.center)
-                            .padding(.horizontal,16)
-                            .padding(.vertical, 8)
-                    }
+                    CategoryButton(isSelected: isSelected, item: item.title)
                 }
             }
             Spacer()
+            //MARK: Save Button
             HStack {
                 Button {
                     selectedCountry = viewModel.selectedCountry
@@ -132,19 +97,14 @@ struct FiltersView: View {
                     isPresented.toggle()
                 } label: {
                     ZStack{
-                        
                         RoundedRectangle(cornerRadius: 24)
                             .fill(LinearGradient(colors: [.Primary, .LightRed], startPoint: .topLeading, endPoint: .bottomTrailing))
-                        
-                        
                         HStack {
                             Text("Save")
                                 .font(.custom("Nunito", size: 20 ))
                                 .fontWeight(.bold)
                                 .foregroundColor( .white)
                                 .multilineTextAlignment(.center)
-                            
-                            
                         }
                         .padding(.vertical, 8)
                         .padding(.horizontal,16)

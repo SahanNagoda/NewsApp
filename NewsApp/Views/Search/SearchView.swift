@@ -61,10 +61,8 @@ struct SearchView: View {
                             viewModel.showFilter.toggle()
                         } label: {
                             ZStack{
-                                
                                 RoundedRectangle(cornerRadius: 16)
                                     .fill(LinearGradient(colors: [.Primary, .LightRed], startPoint: .topLeading, endPoint: .bottomTrailing))
-                                
                                 
                                 HStack {
                                     Image("Filter")
@@ -73,9 +71,7 @@ struct SearchView: View {
                                         .fontWeight(.semibold)
                                         .foregroundColor( .white)
                                         .multilineTextAlignment(.center)
-                                    
-                                    
-                                }
+                                 }
                                 .padding(.vertical, 8)
                                 .padding(.horizontal,16)
                             }
@@ -89,23 +85,7 @@ struct SearchView: View {
                                 viewModel.articles = []
                                 getLatestNewsWithFilter()
                             } label: {
-                                ZStack{
-                                    if isSelected {
-                                        RoundedRectangle(cornerRadius: 16)
-                                            .fill(LinearGradient(colors: [.Primary, .LightRed], startPoint: .topLeading, endPoint: .bottomTrailing))
-                                    }else{
-                                        RoundedRectangle(cornerRadius: 16)
-                                            .stroke(Color.LightGrey, lineWidth: 1)
-                                    }
-                                    
-                                    Text(item)
-                                        .font(.custom("Nunito", size: 12 ))
-                                        .fontWeight(.semibold)
-                                        .foregroundColor(isSelected ? .white : .black)
-                                        .multilineTextAlignment(.center)
-                                        .padding(.horizontal,16)
-                                        .padding(.vertical, 8)
-                                }
+                                CategoryButton(isSelected: isSelected, item: item)
                             }
                         }
                     }
@@ -124,45 +104,7 @@ struct SearchView: View {
                 if viewModel.articles.count > 0 {
                     VStack {
                         ForEach(viewModel.articles, id: \.self) { item in
-                            VStack(alignment:.leading){
-                                Text("\(item.title)")
-                                    .font(.custom("Nunito", size: 18 ))
-                                    .foregroundColor(.white)
-                                    .fontWeight(.bold)
-                                    .multilineTextAlignment(.leading)
-                                Spacer()
-                                if let author = item.author {
-                                    HStack {
-                                        Text("\(author)")
-                                            .font(.custom("Nunito", size: 10 ))
-                                            .foregroundColor(.white)
-                                            .multilineTextAlignment(.leading)
-                                    }
-                                }
-                            }.padding(16)
-                                .frame(maxWidth: .infinity, minHeight: 128)
-                                .onTapGesture {
-                                    self.navigationStack.push(ArticleDetailView(article: item))
-                                }
-                                .background(
-                                    ZStack {
-                                        AsyncImage(url: URL(string: item.urlToImage!), scale: 5) { image in
-                                            image
-                                                .resizable()
-                                                .aspectRatio(contentMode: .fill)
-                                                .cornerRadius(8)
-                                            
-                                        } placeholder: {
-                                            ProgressView()
-                                                .progressViewStyle(.circular)
-                                        }
-                                        .frame(height: 240)
-                                        LinearGradient(colors: [.black.opacity(0.1),.black.opacity(0.7)], startPoint: .top, endPoint: .bottom)
-                                        
-                                    }
-                                )
-                                .cornerRadius(8)
-                                .clipped()
+                            NewsCard(item: item)
                             
                         }
                     }
@@ -193,8 +135,9 @@ struct SearchView_Previews: PreviewProvider {
     }
 }
 
-
+//MARK: Functions
 extension SearchView{
+    /// Able to get news from keywords
     fileprivate func getLatestNews(){
         viewModel.getNewsByKeyword { status, msg in
             if !status{
@@ -203,6 +146,7 @@ extension SearchView{
         }
     }
     
+    /// Able to get news with filters
     fileprivate func getLatestNewsWithFilter(){
         viewModel.getNewsByCategory { status, msg in
             if !status{

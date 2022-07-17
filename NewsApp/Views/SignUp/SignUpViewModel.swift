@@ -27,6 +27,8 @@ class SignUpViewModel: ObservableObject{
         }
     }
     
+    /// Email and password will save locally if the email is valid and password are matched
+    /// - Parameter completion: returns status and message
     func registerUser(completion: @escaping(_ status: Bool, _ message: String?) -> Void) {
         if !validEmail {
             return completion(false, "Email is not valid")

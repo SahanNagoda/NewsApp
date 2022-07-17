@@ -16,6 +16,7 @@ struct AllNewsView: View {
     //MARK: Body
     var body: some View {
         VStack{
+            //MARK: App Bar
             ZStack {
                 HStack{
                     Button {
@@ -43,57 +44,13 @@ struct AllNewsView: View {
                 
             }
             .padding(.top, 20)
+            
+            //MARK: Articles
             if viewModel.articles.count > 0 {
                 ScrollView {
                     LazyVStack {
                         ForEach(viewModel.articles, id: \.self) { item in
-                            VStack(alignment: .leading) {
-                                VStack(alignment:.leading){
-                                    
-                                    Spacer()
-                                    
-                                }.padding(16)
-                                    .frame(maxWidth: .infinity, minHeight: 128)
-                                    .background(
-                                        AsyncImage(url: URL(string: item.urlToImage!), scale: 5) { image in
-                                            image
-                                                .resizable()
-                                                .aspectRatio(contentMode: .fill)
-                                                .cornerRadius(8)
-                                            
-                                        } placeholder: {
-                                            ProgressView()
-                                                .progressViewStyle(.circular)
-                                        }
-                                            .frame(height: 240)
-                                    )
-                                    .cornerRadius(8)
-                                    .clipped()
-                                Text("\(item.title)")
-                                    .font(.custom("Nunito", size: 15 ))
-                                    .foregroundColor(.black)
-                                    .fontWeight(.bold)
-                                    .multilineTextAlignment(.leading)
-                                Text("\(item.content ?? "")")
-                                    .font(.custom("Nunito", size: 14 ))
-                                    .foregroundColor(.black.opacity(0.7))
-                                    .fontWeight(.regular)
-                                    .multilineTextAlignment(.leading)
-                                    .padding(.top,1)
-                                if let author = item.author {
-                                    
-                                    Text("Published by \(author)")
-                                        .font(.custom("Nunito", size: 12 ))
-                                        .foregroundColor(.black)
-                                        .multilineTextAlignment(.leading)
-                                        .padding(.top,1)
-                                    
-                                    
-                                }
-                            }
-                            .onTapGesture {
-                                self.navigationStack.push(ArticleDetailView(article: item))
-                            }
+                            NewsDetailCard(item: item)
                             
                         }.padding(.bottom, 20)
                         if viewModel.articles.count < viewModel.totalArticleCount {
@@ -133,7 +90,9 @@ struct AllNewsView_Previews: PreviewProvider {
     }
 }
 
+//MARK: Functions
 extension AllNewsView{
+    /// Able to get news with filters
     fileprivate func getLatestNewsWithFilter(){
         viewModel.getLatestNewsWithFilters { status, msg in
             if !status{

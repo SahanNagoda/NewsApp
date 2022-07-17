@@ -88,6 +88,7 @@ struct SignUpView_Previews: PreviewProvider {
 
 //MARK: Functions
 extension SignUpView{
+    /// Able to register user
     fileprivate func registerUser(){
         viewModel.registerUser { status, msg in
             if status{

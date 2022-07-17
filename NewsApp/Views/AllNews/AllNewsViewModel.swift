@@ -26,6 +26,8 @@ class AllNewsViewModel: ObservableObject{
         provider = MoyaProvider<ArticleAPI>(plugins: [networkLogger])
     }
     
+    /// Able to get news with filters
+    /// - Parameter completion: returns status and message
     func getLatestNewsWithFilters(completion: @escaping(_ status: Bool, _ message: String?) -> Void) {
         newsWithFilterSubscription = provider.requestPublisher(.topHeadlineWithFilter(category: "", country: selectedCountry?.code ?? "", language: selectedLanguage?.code ?? "en" , page: articlePage, pageSize: 10))
             .subscribe(on: DispatchQueue.global(qos: .default))

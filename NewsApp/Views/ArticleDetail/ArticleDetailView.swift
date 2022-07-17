@@ -119,6 +119,7 @@ struct ArticleDetailView: View {
     }
 }
 
+//MARK: Preview
 struct ArticleDetailView_Previews: PreviewProvider {
     static var previews: some View {
         ArticleDetailView(article: articleMock)

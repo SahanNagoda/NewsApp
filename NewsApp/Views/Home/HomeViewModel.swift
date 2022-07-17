@@ -29,6 +29,8 @@ class HomeViewModel: ObservableObject{
         provider = MoyaProvider<ArticleAPI>(plugins: [networkLogger])
     }
     
+    /// Able to get latest news in US
+    /// - Parameter completion: returns status and message
     func getLatestNews(completion: @escaping(_ status: Bool, _ message: String?) -> Void) {
         
         newsSubscription = provider.requestPublisher(.topHeadline(country: "US", page: 1, pageSize: 10))
@@ -64,6 +66,9 @@ class HomeViewModel: ObservableObject{
             })
     }
     
+    
+    /// Able to get Latest News in the selected category
+    /// - Parameter completion: returns status and message
     func getLatestNewsByCategory(completion: @escaping(_ status: Bool, _ message: String?) -> Void) {
         
         newsWithFilterSubscription = provider.requestPublisher(.topHeadlineWithFilter(category: selectedCategory, country: "US", language: "en", page: categoryArticlePage, pageSize: 10))

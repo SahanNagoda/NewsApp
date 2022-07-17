@@ -31,6 +31,8 @@ class SearchViewModel: ObservableObject{
         provider = MoyaProvider<ArticleAPI>(plugins: [networkLogger])
     }
     
+    /// Able to get news by filtering with keywords
+    /// - Parameter completion: returns status and message
     func getNewsByKeyword(completion: @escaping(_ status: Bool, _ message: String?) -> Void) {
         isBusy = true
         newsSubscription = provider.requestPublisher(.searchNews(keywords: searchText, page: 1, pageSize: 10))
@@ -67,6 +69,8 @@ class SearchViewModel: ObservableObject{
             })
     }
     
+    /// Able to get news with filters
+    /// - Parameter completion: returns status and message
     func getNewsByCategory(completion: @escaping(_ status: Bool, _ message: String?) -> Void) {
         isBusy = true
         newsWithFilterSubscription = provider.requestPublisher(.searchNewsWithFilter(category: selectedCategory, country: selectedCountry?.code ?? "",language: selectedLanguage?.code ?? "", keywords: searchText, page: articlePage, pageSize: 10))

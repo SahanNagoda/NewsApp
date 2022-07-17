@@ -9,4 +9,5 @@ target 'NewsApp' do
   pod 'Moya/Combine', '~> 15.0'
   pod 'NavigationStack'
   pod 'lottie-ios'
+  pod 'RealmSwift', '~>10'
 end

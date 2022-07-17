@@ -6,11 +6,17 @@ PODS:
   - Moya/Core (15.0.0):
     - Alamofire (~> 5.0)
   - NavigationStack (1.0.4)
+  - Realm (10.28.2):
+    - Realm/Headers (= 10.28.2)
+  - Realm/Headers (10.28.2)
+  - RealmSwift (10.28.2):
+    - Realm (= 10.28.2)
 
 DEPENDENCIES:
   - lottie-ios
   - Moya/Combine (~> 15.0)
   - NavigationStack
+  - RealmSwift (~> 10)
 
 SPEC REPOS:
   trunk:
@@ -18,13 +24,17 @@ SPEC REPOS:
     - lottie-ios
     - Moya
     - NavigationStack
+    - Realm
+    - RealmSwift
 
 SPEC CHECKSUMS:
   Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
   lottie-ios: 69495122151a378fdc7d1bb4c5930347e37baf1f
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
   NavigationStack: c2fb4c71b89659481e8e0dfb20e533681dce084f
+  Realm: e617c54ad0f566b3d0f6a2abae7010de05f252ac
+  RealmSwift: 8a516a8759d80d52ebcec1ff1076f5f5159f98b2
 
-PODFILE CHECKSUM: fc7c6f1b4a15fc958b165dcd53e5c811a594afc8
+PODFILE CHECKSUM: aa124ea47d2fba6674091c19bee27613e7e38766
 
 COCOAPODS: 1.11.2

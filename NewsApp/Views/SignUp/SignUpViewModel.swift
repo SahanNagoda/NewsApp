@@ -38,9 +38,7 @@ class SignUpViewModel: ObservableObject{
             return completion(false, "Password can not be empty")
         }
         
-        DataStore.shared.setEmail(email: email)
-        DataStore.shared.setPassword(password: password)
-        DataStore.shared.loggedIn()
+        DataStore.shared.registerUser(email: email, password: password)
         completion(true, nil)
     }
 }

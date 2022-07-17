@@ -55,6 +55,7 @@
 		7A3DE4B02883FA6D00D75531 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		7A3DE4B32883FA9A00D75531 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		7A3DE4B62883FCE600D75531 /* splash-screen-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "splash-screen-animation.json"; sourceTree = "<group>"; };
+		7A3DE4B82884068000D75531 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		7A4C805628827A7F000B42B5 /* NewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A4C805928827A7F000B42B5 /* NewsAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAppApp.swift; sourceTree = "<group>"; };
 		7A4C805D28827A81000B42B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -145,6 +146,7 @@
 		7A4C804D28827A7F000B42B5 = {
 			isa = PBXGroup;
 			children = (
+				7A3DE4B82884068000D75531 /* README.md */,
 				7A4C805828827A7F000B42B5 /* NewsApp */,
 				7A4C805728827A7F000B42B5 /* Products */,
 				C67A2A293E09E8E53CCCA745 /* Pods */,

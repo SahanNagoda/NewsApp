@@ -29,7 +29,7 @@
  
 ##### Developer notes
  - Environment can be changed from `NetworkManager.swift` file.
-    `static let environment: APIEnvironment = .qa`
+    `static let environment: APIEnvironment = .staging`
     (**staging**, **live**)
  - Base URL and the API key can be change from `Config.swift` file.
 

@@ -15,93 +15,91 @@ struct LoginView: View {
     
     //MARK: Body
     var body: some View {
-
-            VStack(alignment: .leading, spacing: 1){
+        VStack(alignment: .leading, spacing: 1){
+            Image("logo")
+                .resizable()
+                .frame(width: 200, height: 80)
+                .padding(.top, 10)
+                .padding(.leading, 10)
+            
+            Text("Welcome back,")
+                .font(.custom("Poppins", size: 22 ))
+                .multilineTextAlignment(.center)
+                .padding(.top, 20)
+                .padding(.leading, 30)
+            Text("Login to get started!")
+                .font(.custom("Poppins", size: 15 ))
+                .multilineTextAlignment(.center)
+                .padding(.top, 10)
+                .padding(.leading, 30)
+            MaterialTextField(hint: "Email", text: $viewModel.email, status: viewModel.emailStatus, errorMsg: "", isSecure: false)
+                .padding(.top, 20)
+                .padding(.bottom, -10)
+            MaterialTextField(hint: "Password", text: $viewModel.password, status: viewModel.emailStatus, errorMsg: viewModel.errorMsg, isSecure: true)
+                .padding(.top, 0)
+            Button {
+                loginUser()
+            } label: {
+                Rectangle()
+                    .fill( .black)
+                    .overlay(
+                        HStack {
+                            Text("Continue")
+                                .font(.custom("Poppins", size: 14))
+                                .fontWeight(.semibold)
+                                .multilineTextAlignment(.center)
+                                .foregroundColor(.white  )
+                            Image("WhiteRightArrow")
+                                .colorMultiply( .white  )
+                        }
+                    )
                 
-                Image("logo")
-                    .resizable()
-                    .frame(width: 200, height: 80)
-                    .padding(.top, 10)
-                    .padding(.leading, 10)
+                    .frame(width: 150, height: 45)
+                    .cornerRadius(5)
+                    .padding(.leading,30)
+                    .frame(height: 50)
+                    .cornerRadius(5)
                 
-                Text("Welcome back,")
-                    .font(.custom("Poppins", size: 22 ))
-                    .multilineTextAlignment(.center)
-                    .padding(.top, 20)
-                    .padding(.leading, 30)
-                Text("Login to get started!")
-                    .font(.custom("Poppins", size: 15 ))
-                    .multilineTextAlignment(.center)
-                    .padding(.top, 10)
-                    .padding(.leading, 30)
-                MaterialTextField(hint: "Email", text: $viewModel.email, status: viewModel.emailStatus, errorMsg: "", isSecure: false)
-                    .padding(.top, 20)
-                    .padding(.bottom, -10)
-                MaterialTextField(hint: "Password", text: $viewModel.password, status: viewModel.emailStatus, errorMsg: viewModel.errorMsg, isSecure: true)
-                    .padding(.top, 0)
+                
+            }
+            .padding(.top, 10)
+            
+            Spacer()
+            //MARK: Footer
+            HStack(spacing: 50){
+                Text("Don’t have an account?")
+                    .font(.custom("Poppins", size: 14 ))
+                    .fontWeight(.bold)
+                    .multilineTextAlignment(.leading)
                 Button {
-                    loginUser()
+                    DispatchQueue.main.async {
+                        self.navigationStack.push(SignUpView())
+                    }
                 } label: {
                     Rectangle()
-                        .fill( .black)
+                        .fill(.black)
                         .overlay(
                             HStack {
-                                Text("Continue")
+                                Text("Sign Up")
                                     .font(.custom("Poppins", size: 14))
                                     .fontWeight(.semibold)
                                     .multilineTextAlignment(.center)
-                                    .foregroundColor(.white  )
+                                    .foregroundColor(Color.white)
                                 Image("WhiteRightArrow")
-                                    .colorMultiply( .white  )
                             }
                         )
-                    
-                        .frame(width: 150, height: 45)
-                        .cornerRadius(5)
-                        .padding(.leading,30)
                         .frame(height: 50)
                         .cornerRadius(5)
-                    
-                    
                 }
-                .padding(.top, 10)
-                
-                Spacer()
-                HStack(spacing: 50){
-                    Text("Don’t have an account?")
-                        .font(.custom("Poppins", size: 14 ))
-                        .fontWeight(.bold)
-                        .multilineTextAlignment(.leading)
-                    Button {
-                        DispatchQueue.main.async {
-                            self.navigationStack.push(SignUpView())
-                        }
-                    } label: {
-                        Rectangle()
-                            .fill(.black)
-                            .overlay(
-                                HStack {
-                                    Text("Sign Up")
-                                        .font(.custom("Poppins", size: 14))
-                                        .fontWeight(.semibold)
-                                        .multilineTextAlignment(.center)
-                                        .foregroundColor(Color.white)
-                                    Image("WhiteRightArrow")
-                                }
-                            )
-                            .frame(height: 50)
-                            .cornerRadius(5)
-                        
-                    }
-                }
-                .padding(.all, 20)
-                .padding(.bottom, 10)
-                .background(Rectangle()
-                    .fill(.gray.opacity(0.5))
-                    .ignoresSafeArea())
-                
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .padding(.all, 20)
+            .padding(.bottom, 10)
+            .background(Rectangle()
+                .fill(Color.LightBackground)
+                .ignoresSafeArea())
+            
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
 

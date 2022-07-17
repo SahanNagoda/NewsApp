@@ -113,12 +113,14 @@ struct HomeView_Previews: PreviewProvider {
 
 //MARK: Functions
 extension HomeView{
+    /// Able to reload the data
     fileprivate func refresh(){
         viewModel.latestArticles = []
         viewModel.categoryArticles = []
         getLatestNews()
         getLatestNewsByCategory()
     }
+    /// Able to get Latest news
     fileprivate func getLatestNews(){
         if viewModel.latestNewsIsBusy{
             return
@@ -132,6 +134,7 @@ extension HomeView{
         }
     }
     
+    /// Able to get latest news by category
     fileprivate func getLatestNewsByCategory(){
         if viewModel.newsCategoryIsBusy{
             return

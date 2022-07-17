@@ -113,6 +113,7 @@ struct LoginView_Previews: PreviewProvider {
 
 //MARK: Functions
 extension LoginView{
+    /// Authenticate the User
     fileprivate func loginUser(){
         viewModel.loginUser { status, msg in
             if status{

@@ -31,6 +31,8 @@ class LoginViewModel: ObservableObject{
         #endif
     }
     
+    /// User able to log if email and password matched with the local storage values
+    /// - Parameter completion: returns status and message
     func loginUser(completion: @escaping(_ status: Bool, _ message: String?) -> Void) {
         if !validEmail {
             return completion(false, "Email is not valid")

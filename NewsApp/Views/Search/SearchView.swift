@@ -137,6 +137,7 @@ struct SearchView_Previews: PreviewProvider {
 
 //MARK: Functions
 extension SearchView{
+    /// Able to get news from keywords
     fileprivate func getLatestNews(){
         viewModel.getNewsByKeyword { status, msg in
             if !status{
@@ -145,6 +146,7 @@ extension SearchView{
         }
     }
     
+    /// Able to get news with filters
     fileprivate func getLatestNewsWithFilter(){
         viewModel.getNewsByCategory { status, msg in
             if !status{

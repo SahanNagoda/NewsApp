@@ -92,6 +92,7 @@ struct AllNewsView_Previews: PreviewProvider {
 
 //MARK: Functions
 extension AllNewsView{
+    /// Able to get news with filters
     fileprivate func getLatestNewsWithFilter(){
         viewModel.getLatestNewsWithFilters { status, msg in
             if !status{

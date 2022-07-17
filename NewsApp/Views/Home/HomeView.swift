@@ -35,17 +35,27 @@ struct HomeView: View {
                             .padding(.leading, 16)
                         Spacer()
                         Image("Search")
+                            
                             .padding(.trailing, 16)
                     }
                 }.onTapGesture {
                     self.navigationStack.push(SearchView())
                 }
-                ZStack{
-                    Circle()
-                        .fill(LinearGradient(colors: [.Primary, .LightRed], startPoint: .topLeading, endPoint: .bottomTrailing))
-                        .frame(width: 32, height: 32)
-                    Image("Notification")
+                Button {
+                    DataStore.shared.loggedOut()
+                    self.navigationStack.push(LoginView())
+                } label: {
+                    ZStack{
+                        Circle()
+                            .fill(LinearGradient(colors: [.Primary, .LightRed], startPoint: .topLeading, endPoint: .bottomTrailing))
+                            .frame(width: 32, height: 32)
+                        Image("logout")
+                            .resizable()
+                            .frame(width: 20, height: 20)
+                    }
                 }
+
+                
                 .padding(.leading, 16)
             }.padding(15)
             ScrollView{

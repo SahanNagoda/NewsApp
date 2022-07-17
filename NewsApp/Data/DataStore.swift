@@ -28,6 +28,18 @@ class DataStore{
         return UserDefaults.standard.string(forKey: "email")
     }
     
+    func isLogged() -> Bool{
+        return UserDefaults.standard.bool(forKey: "isLogged")
+    }
+    
+    func loggedIn() {
+        UserDefaults.standard.set(true, forKey: "isLogged")
+    }
+    
+    func loggedOut() {
+        UserDefaults.standard.set(true, forKey: "isLogged")
+    }
+    
     func checkEmail(email: String) -> Bool{
         guard let storeEmail = getEmail() else { return false }
         if email.lowercased() == storeEmail{

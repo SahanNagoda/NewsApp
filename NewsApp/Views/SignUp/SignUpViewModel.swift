@@ -38,6 +38,7 @@ class SignUpViewModel: ObservableObject{
         
         DataStore.shared.setEmail(email: email)
         DataStore.shared.setPassword(password: password)
+        DataStore.shared.loggedIn()
         completion(true, nil)
     }
 }

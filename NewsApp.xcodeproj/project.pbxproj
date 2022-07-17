@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		7A3DE4AF2883C59700D75531 /* ArticleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3DE4AE2883C59700D75531 /* ArticleDetailView.swift */; };
+		7A3DE4B12883FA6D00D75531 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3DE4B02883FA6D00D75531 /* LottieView.swift */; };
+		7A3DE4B42883FA9A00D75531 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3DE4B32883FA9A00D75531 /* SplashScreenView.swift */; };
+		7A3DE4B72883FCE600D75531 /* splash-screen-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 7A3DE4B62883FCE600D75531 /* splash-screen-animation.json */; };
 		7A4C805A28827A7F000B42B5 /* NewsAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4C805928827A7F000B42B5 /* NewsAppApp.swift */; };
 		7A4C805E28827A81000B42B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A4C805D28827A81000B42B5 /* Assets.xcassets */; };
 		7A4C806128827A81000B42B5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A4C806028827A81000B42B5 /* Preview Assets.xcassets */; };
@@ -49,6 +52,9 @@
 
 /* Begin PBXFileReference section */
 		7A3DE4AE2883C59700D75531 /* ArticleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailView.swift; sourceTree = "<group>"; };
+		7A3DE4B02883FA6D00D75531 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		7A3DE4B32883FA9A00D75531 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		7A3DE4B62883FCE600D75531 /* splash-screen-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "splash-screen-animation.json"; sourceTree = "<group>"; };
 		7A4C805628827A7F000B42B5 /* NewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A4C805928827A7F000B42B5 /* NewsAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAppApp.swift; sourceTree = "<group>"; };
 		7A4C805D28827A81000B42B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -120,6 +126,22 @@
 			path = ArticleDetail;
 			sourceTree = "<group>";
 		};
+		7A3DE4B22883FA8300D75531 /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				7A3DE4B32883FA9A00D75531 /* SplashScreenView.swift */,
+			);
+			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		7A3DE4B52883FCC000D75531 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7A3DE4B62883FCE600D75531 /* splash-screen-animation.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		7A4C804D28827A7F000B42B5 = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +163,7 @@
 		7A4C805828827A7F000B42B5 /* NewsApp */ = {
 			isa = PBXGroup;
 			children = (
+				7A3DE4B52883FCC000D75531 /* Resources */,
 				7A4C809B2882BAEB000B42B5 /* Network */,
 				7A4C809A2882BA98000B42B5 /* API */,
 				7A4C80962882A7A0000B42B5 /* Info.plist */,
@@ -175,6 +198,7 @@
 		7A4C806828827FA7000B42B5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7A3DE4B22883FA8300D75531 /* SplashScreen */,
 				7A3DE4AD2883C57E00D75531 /* ArticleDetail */,
 				7A8F993028833EDD00243655 /* AllNews */,
 				7A4C80AF288312A6000B42B5 /* Filters */,
@@ -199,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				7A4C80712882834B000B42B5 /* MaterialTextField.swift */,
+				7A3DE4B02883FA6D00D75531 /* LottieView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -404,6 +429,7 @@
 				7A4C805E28827A81000B42B5 /* Assets.xcassets in Resources */,
 				7A4C808E2882A474000B42B5 /* Nunito-ExtraBold.ttf in Resources */,
 				7A4C808C2882A474000B42B5 /* Nunito-Light.ttf in Resources */,
+				7A3DE4B72883FCE600D75531 /* splash-screen-animation.json in Resources */,
 				7A4C808D2882A474000B42B5 /* Nunito-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -458,7 +484,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A4C807A28828BB1000B42B5 /* DataStore.swift in Sources */,
+				7A3DE4B42883FA9A00D75531 /* SplashScreenView.swift in Sources */,
 				7A4C808428829ED5000B42B5 /* HomeViewModel.swift in Sources */,
+				7A3DE4B12883FA6D00D75531 /* LottieView.swift in Sources */,
 				7A4C806D28828082000B42B5 /* LoginViewModel.swift in Sources */,
 				7A4C809F2882BB7E000B42B5 /* NetworkManager.swift in Sources */,
 				7A4C80752882840B000B42B5 /* Color+Extension.swift in Sources */,

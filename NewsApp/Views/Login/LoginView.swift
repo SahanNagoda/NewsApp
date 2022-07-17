@@ -18,17 +18,16 @@ struct LoginView: View {
 
             VStack(alignment: .leading, spacing: 1){
                 
-                Text("K-News")
-                    .font(.custom("Poppins", size: 35 ))
-                    .fontWeight(.bold)
-                    .multilineTextAlignment(.center)
-                    .padding(.top, 50)
-                    .padding(.leading, 30)
+                Image("logo")
+                    .resizable()
+                    .frame(width: 200, height: 80)
+                    .padding(.top, 10)
+                    .padding(.leading, 10)
                 
                 Text("Welcome back,")
                     .font(.custom("Poppins", size: 22 ))
                     .multilineTextAlignment(.center)
-                    .padding(.top, 30)
+                    .padding(.top, 20)
                     .padding(.leading, 30)
                 Text("Login to get started!")
                     .font(.custom("Poppins", size: 15 ))

@@ -12,7 +12,7 @@ struct NewsAppApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationStackView {
-                LoginView()
+                SplashScreenView()
                     
             }.preferredColorScheme(.light)
         }

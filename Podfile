@@ -8,4 +8,5 @@ target 'NewsApp' do
   # Pods for NewsApp
   pod 'Moya/Combine', '~> 15.0'
   pod 'NavigationStack'
+  pod 'lottie-ios'
 end

@@ -24,6 +24,8 @@ class DataStore{
         }
     }
     
+    /// Able to get current logged in user
+    /// - Returns: Current User
     func getCurrentUser() -> User?{
         let users = localRealm.objects(User.self)
         return users.first { user in
@@ -31,6 +33,11 @@ class DataStore{
         }
     }
     
+    /// Able to verify user email and password
+    /// - Parameters:
+    ///   - email: Email
+    ///   - password: Password
+    /// - Returns: Return true if user is verified
     func logInUser(email: String, password: String) -> Bool{
         let users = localRealm.objects(User.self)
         let user = users.first { user in
@@ -43,6 +50,7 @@ class DataStore{
         return true
     }
     
+    /// Able to logout every user
     func logoutUser(){
         let users = localRealm.objects(User.self)
         users.forEach { user in

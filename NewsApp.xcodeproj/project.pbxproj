@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A3DE4AF2883C59700D75531 /* ArticleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3DE4AE2883C59700D75531 /* ArticleDetailView.swift */; };
 		7A4C805A28827A7F000B42B5 /* NewsAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4C805928827A7F000B42B5 /* NewsAppApp.swift */; };
 		7A4C805E28827A81000B42B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A4C805D28827A81000B42B5 /* Assets.xcassets */; };
 		7A4C806128827A81000B42B5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A4C806028827A81000B42B5 /* Preview Assets.xcassets */; };
@@ -47,6 +48,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A3DE4AE2883C59700D75531 /* ArticleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailView.swift; sourceTree = "<group>"; };
 		7A4C805628827A7F000B42B5 /* NewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A4C805928827A7F000B42B5 /* NewsAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAppApp.swift; sourceTree = "<group>"; };
 		7A4C805D28827A81000B42B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -110,6 +112,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7A3DE4AD2883C57E00D75531 /* ArticleDetail */ = {
+			isa = PBXGroup;
+			children = (
+				7A3DE4AE2883C59700D75531 /* ArticleDetailView.swift */,
+			);
+			path = ArticleDetail;
+			sourceTree = "<group>";
+		};
 		7A4C804D28827A7F000B42B5 = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +175,7 @@
 		7A4C806828827FA7000B42B5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7A3DE4AD2883C57E00D75531 /* ArticleDetail */,
 				7A8F993028833EDD00243655 /* AllNews */,
 				7A4C80AF288312A6000B42B5 /* Filters */,
 				7A4C80A72882F3FD000B42B5 /* Search */,
@@ -458,6 +469,7 @@
 				7A4C806B28827FE6000B42B5 /* LoginView.swift in Sources */,
 				7A4C80B42883134F000B42B5 /* DropDown.swift in Sources */,
 				7A4C80B1288312BF000B42B5 /* FiltersView.swift in Sources */,
+				7A3DE4AF2883C59700D75531 /* ArticleDetailView.swift in Sources */,
 				7A4C807F28828CD1000B42B5 /* SignUpViewModel.swift in Sources */,
 				7A4C80A62882BD8D000B42B5 /* ArticleAPI.swift in Sources */,
 				7A4C80A22882BBEE000B42B5 /* Generic.swift in Sources */,

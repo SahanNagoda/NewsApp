@@ -141,6 +141,9 @@ struct SearchView: View {
                                 }
                             }.padding(16)
                                 .frame(maxWidth: .infinity, minHeight: 128)
+                                .onTapGesture {
+                                    self.navigationStack.push(ArticleDetailView(article: item))
+                                }
                                 .background(
                                     ZStack {
                                         AsyncImage(url: URL(string: item.urlToImage!), scale: 5) { image in

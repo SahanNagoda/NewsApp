@@ -68,7 +68,7 @@ struct AllNewsView: View {
                                             .frame(height: 240)
                                     )
                                     .cornerRadius(8)
-                                .clipped()
+                                    .clipped()
                                 Text("\(item.title)")
                                     .font(.custom("Nunito", size: 15 ))
                                     .foregroundColor(.black)
@@ -82,14 +82,17 @@ struct AllNewsView: View {
                                     .padding(.top,1)
                                 if let author = item.author {
                                     
-                                        Text("Published by \(author)")
-                                            .font(.custom("Nunito", size: 12 ))
-                                            .foregroundColor(.black)
-                                            .multilineTextAlignment(.leading)
-                                            .padding(.top,1)
-                                            
+                                    Text("Published by \(author)")
+                                        .font(.custom("Nunito", size: 12 ))
+                                        .foregroundColor(.black)
+                                        .multilineTextAlignment(.leading)
+                                        .padding(.top,1)
+                                    
                                     
                                 }
+                            }
+                            .onTapGesture {
+                                self.navigationStack.push(ArticleDetailView(article: item))
                             }
                             
                         }.padding(.bottom, 20)

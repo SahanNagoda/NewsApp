@@ -123,6 +123,9 @@ struct HomeView: View {
                             )
                             .cornerRadius(8)
                             .clipped()
+                            .onTapGesture {
+                                self.navigationStack.push(ArticleDetailView(article: item))
+                            }
                     }
                               .frame(height: 240)
                 }else{
@@ -183,11 +186,14 @@ struct HomeView: View {
                                         Text("\(author)")
                                             .font(.custom("Nunito", size: 10 ))
                                             .foregroundColor(.white)
-                                        .multilineTextAlignment(.leading)
+                                            .multilineTextAlignment(.leading)
                                     }
                                 }
                             }.padding(16)
                                 .frame(maxWidth: .infinity, minHeight: 128)
+                                .onTapGesture {
+                                    self.navigationStack.push(ArticleDetailView(article: item))
+                                }
                                 .background(
                                     ZStack {
                                         AsyncImage(url: URL(string: item.urlToImage!), scale: 5) { image in
@@ -208,13 +214,14 @@ struct HomeView: View {
                                 .cornerRadius(8)
                                 .clipped()
                             
+                            
                         }
-//                        ProgressView()
-//                            .padding(50)
-//                            .onAppear{
-//                                viewModel.categoryArticlePage += 1
-//                                getLatestNewsByCategory()
-//                            }
+                        //                        ProgressView()
+                        //                            .padding(50)
+                        //                            .onAppear{
+                        //                                viewModel.categoryArticlePage += 1
+                        //                                getLatestNewsByCategory()
+                        //                            }
                     }
                     .padding(.top, 30)
                     .padding(.horizontal, 16)

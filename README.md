@@ -1,6 +1,6 @@
 # K News Mobile App
 
-![swift](https://img.shields.io/badge/swift-5.0-orange) ![Platform](https://img.shields.io/badge/platform-iOS-lightgrey) ![Version](https://img.shields.io/badge/Staging-1.0(1)-blue)
+![swift](https://img.shields.io/badge/swift-5.0-orange) ![Platform](https://img.shields.io/badge/platform-iOS-lightgrey) ![Version](https://img.shields.io/badge/Staging-1.0(1)-blue) [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 #### Requirements
  - iOS 15.0+
 

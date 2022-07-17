@@ -6,72 +6,62 @@
 //
 
 import Foundation
+import RealmSwift
 
 class DataStore{
     static let shared  = DataStore()
-    
+    private let localRealm = try! Realm()
     private init(){}
     
-    /// Able to save password
-    /// - Parameter password: password
-    func setPassword(password: String) {
-        UserDefaults.standard.set(password, forKey: "password")
+    /// Able to register new User
+    /// - Parameters:
+    ///   - email: Email
+    ///   - password: Password
+    func registerUser(email: String, password: String){
+        let user = User(email: email.lowercased(), password: password, isLoggedIn: true)
+        try! localRealm.write {
+            localRealm.add(user)
+        }
     }
     
-    /// Able to extract password
-    /// - Returns: User's password
-    fileprivate func getPassword() -> String? {
-        return UserDefaults.standard.string(forKey: "password")
+    func getCurrentUser() -> User?{
+        let users = localRealm.objects(User.self)
+        return users.first { user in
+            return user.isLoggedIn
+        }
     }
     
-    /// Able to save password
-    /// - Parameter email: User's Email
-    func setEmail(email: String) {
-        UserDefaults.standard.set(email.lowercased(), forKey: "email")
+    func logInUser(email: String, password: String) -> Bool{
+        let users = localRealm.objects(User.self)
+        let user = users.first { user in
+            return (user.email == email.lowercased()) && (user.password == password)
+        }
+        guard let user = user else { return false }
+        try! localRealm.write {
+            user.isLoggedIn = true
+        }
+        return true
     }
     
-    /// Able to get Email
-    /// - Returns: Email
-    func getEmail() -> String? {
-        return UserDefaults.standard.string(forKey: "email")
+    func logoutUser(){
+        let users = localRealm.objects(User.self)
+        users.forEach { user in
+            try! localRealm.write {
+                user.isLoggedIn = false
+            }
+        }
     }
     
     /// Able to check user is Logged in
     /// - Returns: Return true if user already logged
     func isLogged() -> Bool{
-        return UserDefaults.standard.bool(forKey: "isLogged")
-    }
-    
-    /// Able to save user is log successfully
-    func loggedIn() {
-        UserDefaults.standard.set(true, forKey: "isLogged")
+        guard getCurrentUser() != nil else { return false }
+        return true
     }
     
     /// Able to save user is logout successfully
     func loggedOut() {
-        UserDefaults.standard.set(true, forKey: "isLogged")
-    }
-    
-    /// Able to authenticate email
-    /// - Parameter email: User entered email
-    /// - Returns: Return true if emails are matched
-    func checkEmail(email: String) -> Bool{
-        guard let storeEmail = getEmail() else { return false }
-        if email.lowercased() == storeEmail{
-            return true
-        }
-        return false
-    }
-    
-    /// Able to authenticate password
-    /// - Parameter password: User entered password
-    /// - Returns: Return true if passwords are matched
-    func checkPassword(password: String) -> Bool{
-        guard let pass = getPassword() else { return false }
-        if password == pass{
-            return true
-        }
-        return false
+        logoutUser()
     }
     
 }

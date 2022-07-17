@@ -24,11 +24,11 @@ class LoginViewModel: ObservableObject{
     @Published var errorMsg: String = ""
     
     init(){
-        #if DEBUG
-            email = "sahan.nagodavithana@gmail.com"
-            password = "12345"
-            validEmail = true
-        #endif
+//        #if DEBUG
+//            email = "sahan.nagodavithana@gmail.com"
+//            password = "12345"
+//            validEmail = true
+//        #endif
     }
     
     /// User able to log if email and password matched with the local storage values
@@ -40,10 +40,8 @@ class LoginViewModel: ObservableObject{
             return completion(false, "Password can not be empty")
         }
         
-        let isEmailAuthenticated = DataStore.shared.checkEmail(email: email)
-        let isPasswordAuthenticated = DataStore.shared.checkPassword(password: password)
-        if isEmailAuthenticated && isPasswordAuthenticated{
-            DataStore.shared.loggedIn()
+        let isUserAuthenticated = DataStore.shared.logInUser(email: email, password: password)
+        if isUserAuthenticated{
             completion(true, nil)
         }else{
             completion(false, "You have entered an invalid username or password")
